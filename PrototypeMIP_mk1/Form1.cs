@@ -16,5 +16,10 @@ namespace PrototypeMIP_mk1
         {
             InitializeComponent();
         }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
