@@ -35,7 +35,7 @@
             // 
             // btnSAVE
             // 
-            this.btnSAVE.Location = new System.Drawing.Point(70, 76);
+            this.btnSAVE.Location = new System.Drawing.Point(30, 456);
             this.btnSAVE.Name = "btnSAVE";
             this.btnSAVE.Size = new System.Drawing.Size(75, 23);
             this.btnSAVE.TabIndex = 1;
@@ -44,7 +44,7 @@
             // 
             // btnOpen
             // 
-            this.btnOpen.Location = new System.Drawing.Point(70, 298);
+            this.btnOpen.Location = new System.Drawing.Point(30, 504);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(75, 23);
             this.btnOpen.TabIndex = 2;
@@ -54,9 +54,9 @@
             // 
             // richtxtBox
             // 
-            this.richtxtBox.Location = new System.Drawing.Point(215, 65);
+            this.richtxtBox.Location = new System.Drawing.Point(161, 12);
             this.richtxtBox.Name = "richtxtBox";
-            this.richtxtBox.Size = new System.Drawing.Size(175, 126);
+            this.richtxtBox.Size = new System.Drawing.Size(374, 530);
             this.richtxtBox.TabIndex = 3;
             this.richtxtBox.Text = "";
             // 
@@ -64,7 +64,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(547, 554);
             this.Controls.Add(this.richtxtBox);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.btnSAVE);
