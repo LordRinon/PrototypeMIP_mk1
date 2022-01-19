@@ -11,19 +11,20 @@ using PrototypeMIP_mk1.Controller;
 
 namespace PrototypeMIP_mk1.View
 {
-    public partial class LoginForm : Form
+    public partial class LoginView : Form
     {
         LoginController controller = new LoginController();
         string username;
         string password;
-        public LoginForm()
+        public LoginView()
         {
             InitializeComponent();
         }
 
         private void btnFolSel_Click(object sender, EventArgs e)
         {
-            controller.OpenFolder();
+            string folName = controller.OpenFolder();
+            OpenFolder_Update(folName);
         }
 
         private void btnAuth_Click(object sender, EventArgs e)
@@ -58,6 +59,12 @@ namespace PrototypeMIP_mk1.View
                 return true;
             }
             else return false;
+        }
+
+        // Updates Open Folder button to selected folder
+        private void OpenFolder_Update(string folName)
+        {
+            btnFolSel.Text = folName;
         }
     }
 }

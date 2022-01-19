@@ -17,7 +17,7 @@ namespace PrototypeMIP_mk1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new LoginView());
         }
     }
 }

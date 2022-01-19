@@ -1,6 +1,6 @@
 ﻿namespace PrototypeMIP_mk1
 {
-    partial class Form1
+    partial class AlphaEditor
     {
         /// <summary>
         /// Required designer variable.
@@ -35,18 +35,20 @@
             // 
             // btnSAVE
             // 
-            this.btnSAVE.Location = new System.Drawing.Point(30, 456);
+            this.btnSAVE.Location = new System.Drawing.Point(35, 561);
+            this.btnSAVE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSAVE.Name = "btnSAVE";
-            this.btnSAVE.Size = new System.Drawing.Size(75, 23);
+            this.btnSAVE.Size = new System.Drawing.Size(88, 28);
             this.btnSAVE.TabIndex = 1;
             this.btnSAVE.Text = "Save";
             this.btnSAVE.UseVisualStyleBackColor = true;
             // 
             // btnOpen
             // 
-            this.btnOpen.Location = new System.Drawing.Point(30, 504);
+            this.btnOpen.Location = new System.Drawing.Point(35, 620);
+            this.btnOpen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(75, 23);
+            this.btnOpen.Size = new System.Drawing.Size(88, 28);
             this.btnOpen.TabIndex = 2;
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = true;
@@ -54,22 +56,30 @@
             // 
             // richtxtBox
             // 
-            this.richtxtBox.Location = new System.Drawing.Point(161, 12);
+            this.richtxtBox.Location = new System.Drawing.Point(188, 15);
+            this.richtxtBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richtxtBox.Name = "richtxtBox";
-            this.richtxtBox.Size = new System.Drawing.Size(374, 530);
+            this.richtxtBox.Size = new System.Drawing.Size(436, 651);
             this.richtxtBox.TabIndex = 3;
             this.richtxtBox.Text = "";
             // 
-            // Form1
+            // AlphaEditor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 554);
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(638, 682);
             this.Controls.Add(this.richtxtBox);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.btnSAVE);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "AlphaEditor";
+            this.ShowIcon = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.Text = "temp // folder opened";
             this.ResumeLayout(false);
 
         }

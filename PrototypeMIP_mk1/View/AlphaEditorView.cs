@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PrototypeMIP_mk1
 {
-    public partial class Form1 : Form
+    public partial class AlphaEditor : Form
     {
-        public Form1()
+        public AlphaEditor()
         {
             InitializeComponent();
         }
