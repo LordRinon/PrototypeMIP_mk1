@@ -11,36 +11,29 @@ using PrototypeMIP_mk1.Controller;
 
 namespace PrototypeMIP_mk1.View
 {
-    public partial class LoginView : Form
+    public partial class CreateAccView : Form
     {
-        LoginController controller = new LoginController();
         string username;
         string password;
-        bool folderSelected = false;
-        public LoginView()
+        public CreateAccView()
         {
             InitializeComponent();
         }
 
-        private void btnFolSel_Click(object sender, EventArgs e)
+        private void btnCreate_Click(object sender, EventArgs e)
         {
-            OpenFolder_Update(controller.OpenFolder());
-            folderSelected = true;
-        }
-
-        private void btnAuth_Click(object sender, EventArgs e)
-        {
-            if (TextBox_Update() && folderSelected)
+            LoginController lg = new LoginController();
+            if (TextBox_Update())
             {
-                if(controller.CheckAuth(username, password))
+                if (lg.CreateAcc(username,password))
                 {
-                    this.Hide();
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
                 }
+                // Pop-up error
             }
-            // Throw pop-up
         }
 
-        // Check if any of the textboxes is empty
         private bool TextBox_Empty()
         {
             if (String.IsNullOrWhiteSpace(txtUsername.Text) || String.IsNullOrWhiteSpace(txtPassword.Text))
@@ -52,8 +45,6 @@ namespace PrototypeMIP_mk1.View
                 return false;
             }
         }
-        
-        // Update username & password parameters
         private bool TextBox_Update()
         {
             if (!TextBox_Empty())
@@ -65,15 +56,10 @@ namespace PrototypeMIP_mk1.View
             else return false;
         }
 
-        // Updates Open Folder button to selected folder
-        private void OpenFolder_Update(string folName)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-            btnFolSel.Text = folName;
-        }
-
-        private void btnCreate_Click(object sender, EventArgs e)
-        {
-            controller.OpenAccCreation();
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }

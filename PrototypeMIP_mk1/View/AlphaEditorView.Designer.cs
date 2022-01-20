@@ -31,12 +31,13 @@
             this.btnSAVE = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
             this.richtxtBox = new System.Windows.Forms.RichTextBox();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.SuspendLayout();
             // 
             // btnSAVE
             // 
             this.btnSAVE.Location = new System.Drawing.Point(35, 561);
-            this.btnSAVE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSAVE.Margin = new System.Windows.Forms.Padding(4);
             this.btnSAVE.Name = "btnSAVE";
             this.btnSAVE.Size = new System.Drawing.Size(88, 28);
             this.btnSAVE.TabIndex = 1;
@@ -46,7 +47,7 @@
             // btnOpen
             // 
             this.btnOpen.Location = new System.Drawing.Point(35, 620);
-            this.btnOpen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOpen.Margin = new System.Windows.Forms.Padding(4);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(88, 28);
             this.btnOpen.TabIndex = 2;
@@ -57,11 +58,19 @@
             // richtxtBox
             // 
             this.richtxtBox.Location = new System.Drawing.Point(188, 15);
-            this.richtxtBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richtxtBox.Margin = new System.Windows.Forms.Padding(4);
             this.richtxtBox.Name = "richtxtBox";
             this.richtxtBox.Size = new System.Drawing.Size(436, 651);
             this.richtxtBox.TabIndex = 3;
             this.richtxtBox.Text = "";
+            this.richtxtBox.TextChanged += new System.EventHandler(this.richtxtBox_TextChanged);
+            // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(12, 15);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(169, 306);
+            this.treeView1.TabIndex = 4;
             // 
             // AlphaEditor
             // 
@@ -70,12 +79,13 @@
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(638, 682);
+            this.Controls.Add(this.treeView1);
             this.Controls.Add(this.richtxtBox);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.btnSAVE);
             this.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AlphaEditor";
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
@@ -88,6 +98,7 @@
         private System.Windows.Forms.Button btnSAVE;
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.RichTextBox richtxtBox;
+        private System.Windows.Forms.TreeView treeView1;
     }
 }
 
