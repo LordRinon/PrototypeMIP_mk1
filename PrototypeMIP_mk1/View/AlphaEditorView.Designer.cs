@@ -28,32 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnSAVE = new System.Windows.Forms.Button();
-            this.btnOpen = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.richtxtBox = new System.Windows.Forms.RichTextBox();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.treeV = new System.Windows.Forms.TreeView();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // btnSAVE
             // 
-            this.btnSAVE.Location = new System.Drawing.Point(35, 561);
+            this.btnSAVE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSAVE.Location = new System.Drawing.Point(12, 636);
             this.btnSAVE.Margin = new System.Windows.Forms.Padding(4);
             this.btnSAVE.Name = "btnSAVE";
-            this.btnSAVE.Size = new System.Drawing.Size(88, 28);
+            this.btnSAVE.Size = new System.Drawing.Size(167, 30);
             this.btnSAVE.TabIndex = 1;
             this.btnSAVE.Text = "Save";
             this.btnSAVE.UseVisualStyleBackColor = true;
+            this.btnSAVE.Click += new System.EventHandler(this.btnSAVE_Click);
             // 
-            // btnOpen
+            // btnUpdate
             // 
-            this.btnOpen.Location = new System.Drawing.Point(35, 620);
-            this.btnOpen.Margin = new System.Windows.Forms.Padding(4);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(88, 28);
-            this.btnOpen.TabIndex = 2;
-            this.btnOpen.Text = "Open";
-            this.btnOpen.UseVisualStyleBackColor = true;
-            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Location = new System.Drawing.Point(12, 468);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(168, 30);
+            this.btnUpdate.TabIndex = 2;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // richtxtBox
             // 
@@ -65,12 +70,14 @@
             this.richtxtBox.Text = "";
             this.richtxtBox.TextChanged += new System.EventHandler(this.richtxtBox_TextChanged);
             // 
-            // treeView1
+            // treeV
             // 
-            this.treeView1.Location = new System.Drawing.Point(12, 15);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(169, 306);
-            this.treeView1.TabIndex = 4;
+            this.treeV.Location = new System.Drawing.Point(12, 15);
+            this.treeV.Name = "treeV";
+            this.treeV.Size = new System.Drawing.Size(169, 446);
+            this.treeV.TabIndex = 4;
+            this.treeV.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeV_NodeMouseDoubleClick);
+            this.treeV.MouseMove += new System.Windows.Forms.MouseEventHandler(this.treeV_MouseMove);
             // 
             // AlphaEditor
             // 
@@ -79,9 +86,9 @@
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(638, 682);
-            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.treeV);
             this.Controls.Add(this.richtxtBox);
-            this.Controls.Add(this.btnOpen);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSAVE);
             this.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -96,9 +103,10 @@
 
         #endregion
         private System.Windows.Forms.Button btnSAVE;
-        private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.RichTextBox richtxtBox;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView treeV;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

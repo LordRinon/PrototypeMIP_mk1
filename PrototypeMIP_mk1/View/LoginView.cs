@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PrototypeMIP_mk1.Controller;
@@ -17,6 +20,7 @@ namespace PrototypeMIP_mk1.View
         string username;
         string password;
         bool folderSelected = false;
+
         public LoginView()
         {
             InitializeComponent();

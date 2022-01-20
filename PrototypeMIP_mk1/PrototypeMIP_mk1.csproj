@@ -63,9 +63,11 @@
       <DependentUpon>202201200228274_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\EF_DBContext\Keys.cs" />
     <Compile Include="Model\EF_DBContext\User.cs" />
     <Compile Include="Model\EncryptionModule.cs" />
     <Compile Include="Model\LoginModule.cs" />
+    <Compile Include="Model\TracerModule.cs" />
     <Compile Include="View\AlphaEditorView.cs">
       <SubType>Form</SubType>
     </Compile>

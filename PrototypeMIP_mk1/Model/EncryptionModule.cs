@@ -17,98 +17,91 @@ using System.IO;
 
 namespace PrototypeMIP_mk1
 {
-    public class Encryption
+    public class EncryptionModule
     {
         private AesCryptoServiceProvider aes;
 
         // Encrypt - Returns encrypted Text + Key + IV | No key & IV Provided
-        public Tuple<List<string>, string, string> Encrypt(List<String> param)
+        public Tuple<string, string, string> Encrypt(string param)
         {
-            List<string> text = new List<string>();
             List<byte[]> encryptedbytes = new List<byte[]>();
+            StringBuilder sb = new StringBuilder();
 
-            foreach (var item in param)
+            byte[] clearbytes = Encoding.UTF8.GetBytes(param);
+            using (MemoryStream ms = new MemoryStream())
             {
-                byte[] clearbytes = Encoding.UTF8.GetBytes(item);
-                using (MemoryStream ms = new MemoryStream())
+                using (CryptoStream cs = new CryptoStream(ms, aes.CreateEncryptor(), CryptoStreamMode.Write))
                 {
-                    using (CryptoStream cs = new CryptoStream(ms, aes.CreateEncryptor(), CryptoStreamMode.Write))
-                    {
-                        cs.Write(clearbytes, 0, clearbytes.Length);
-                        cs.Close();
-                    }
-                    encryptedbytes.Add(ms.ToArray());
+                    cs.Write(clearbytes, 0, clearbytes.Length);
+                    cs.Close();
                 }
+                encryptedbytes.Add(ms.ToArray());
             }
             foreach (var item in encryptedbytes)
             {
-                text.Add(Convert.ToBase64String(item));
+                sb.Append(Convert.ToBase64String(item));
             }
 
-            Tuple<List<string>, string, string> t = new Tuple<List<string>, string, string>(text, Convert.ToBase64String(aes.Key), Convert.ToBase64String(aes.IV));
-            return t;
+
+            
+            return new Tuple<string, string, string>(sb.ToString(), Convert.ToBase64String(aes.Key), Convert.ToBase64String(aes.IV));
         }
 
         // Encrypt - Returns encrypted Text | Key & IV Provided
-        public List<string> Encrypt(Tuple<List<string>, string, string> param)
+        public string Encrypt(Tuple<string, string, string> param)
         {
-            List<string> text = new List<string>();
             List<byte[]> encryptedbytes = new List<byte[]>();
-
+            StringBuilder sb = new StringBuilder();
+            aes = new AesCryptoServiceProvider();
             aes.Key = Convert.FromBase64String(param.Item2);
             aes.IV = Convert.FromBase64String(param.Item3);
 
-            foreach (var item in param.Item1)
+
+            byte[] clearbytes = Encoding.UTF8.GetBytes(param.Item1);
+            using (MemoryStream ms = new MemoryStream())
             {
-                byte[] clearbytes = Encoding.UTF8.GetBytes(item);
-                using (MemoryStream ms = new MemoryStream())
+                using (CryptoStream cs = new CryptoStream(ms, aes.CreateEncryptor(), CryptoStreamMode.Write))
                 {
-                    using (CryptoStream cs = new CryptoStream(ms, aes.CreateEncryptor(), CryptoStreamMode.Write))
-                    {
-                        cs.Write(clearbytes, 0, clearbytes.Length);
-                        cs.Close();
-                    }
-                    encryptedbytes.Add(ms.ToArray());
+                    cs.Write(clearbytes, 0, clearbytes.Length);
+                    cs.Close();
                 }
+                encryptedbytes.Add(ms.ToArray());
             }
             foreach (var item in encryptedbytes)
             {
-                text.Add(Convert.ToBase64String(item));
+                sb.Append(Convert.ToBase64String(item));
             }
-            return text;
+            return sb.ToString();
         }
 
 
         // Decrypt - Returns decrypted Text | Key & IV Provided
-        public List<string> Decrypt(Tuple<List<string>, string, string> param)
+        public string Decrypt(Tuple<string, string, string> param)
         {
-            List<string> text = new List<string>();
-            List<byte[]> decryptedbytes = new List<byte[]>();
-
+            StringBuilder sb = new StringBuilder();
+            aes = new AesCryptoServiceProvider();
             aes.Key = Convert.FromBase64String(param.Item2);
             aes.IV = Convert.FromBase64String(param.Item3);
 
             List<byte[]> clearbytes = new List<byte[]>();
-            foreach (var item in param.Item1)
-            {
-                byte[] encryptedbytes = Convert.FromBase64String(item);
 
-                using (MemoryStream ms = new MemoryStream())
+            byte[] encryptedbytes = Convert.FromBase64String(param.Item1);
+
+            using (MemoryStream ms = new MemoryStream())
+            {
+                using (CryptoStream cs = new CryptoStream(ms,
+                    aes.CreateDecryptor(), CryptoStreamMode.Write))
                 {
-                    using (CryptoStream cs = new CryptoStream(ms,
-                        aes.CreateDecryptor(), CryptoStreamMode.Write))
-                    {
-                        cs.Write(encryptedbytes, 0, encryptedbytes.Length);
-                        cs.Close();
-                    }
-                    clearbytes.Add(ms.ToArray());
+                    cs.Write(encryptedbytes, 0, encryptedbytes.Length);
+                    cs.Close();
                 }
+                clearbytes.Add(ms.ToArray());
             }
             foreach (var item in clearbytes)
             {
-                text.Add(Encoding.UTF8.GetString(item));
+                sb.Append(Encoding.UTF8.GetString(item));
             }
-            return text;
+            return sb.ToString();
 
         }
 
@@ -146,6 +139,14 @@ namespace PrototypeMIP_mk1
                 s.Append(letter);
             }
             return s.ToString();
+        }
+
+        public Tuple<string, string> NewKey()
+        {
+            aes = new AesCryptoServiceProvider();
+            aes.KeySize = 256;
+            aes.CreateEncryptor();
+            return new Tuple<string, string>(Convert.ToBase64String(aes.Key), Convert.ToBase64String(aes.IV));
         }
     }
 }

@@ -16,6 +16,7 @@ namespace PrototypeMIP_mk1.Model
 {
     public class LoginModule
     {
+        EncryptionModule en = new EncryptionModule();
         public string Login(string username, string hash)
         {
 
@@ -43,6 +44,16 @@ namespace PrototypeMIP_mk1.Model
                 db.User.Add(user);
                 db.SaveChanges();
             }
+            using(KeyDbContext db = new KeyDbContext())
+            {
+                Tuple<string,string> t = en.NewKey();
+                Keys keys = new Keys();
+                keys.Access = Access;
+                keys.key = t.Item1;
+                keys.IV = t.Item2;
+                db.Keys.Add(keys);
+                db.SaveChanges();
+            }
         }
         public bool isAdded(string username)
         {
@@ -63,6 +74,23 @@ namespace PrototypeMIP_mk1.Model
                         return false;
                     }
                 }
+        }
+        public Tuple<string, string> GetKey(string access)
+        {
+
+            using (KeyDbContext db = new KeyDbContext())
+            {
+                string key ="";
+                string IV = "";
+                var res = from keys in db.Keys
+                          where keys.Access == access
+                          select new
+                          {
+                              key = keys.key,
+                              IV = keys.IV
+                          };
+                return new Tuple<string, string>(key, IV);
+            }
         }
 
     }
