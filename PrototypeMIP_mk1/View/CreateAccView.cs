@@ -20,6 +20,14 @@ namespace PrototypeMIP_mk1.View
             InitializeComponent();
         }
 
+        public LoginController LoginController
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         private void btnCreate_Click(object sender, EventArgs e)
         {
             LoginController lg = new LoginController();
@@ -60,6 +68,11 @@ namespace PrototypeMIP_mk1.View
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
+        }
+
+        public void Method()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

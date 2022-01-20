@@ -17,6 +17,23 @@ namespace PrototypeMIP_mk1.Model
     public class LoginModule
     {
         EncryptionModule en = new EncryptionModule();
+
+        public UserDbContext UserDbContext
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Controller.LoginController LoginController
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public string Login(string username, string hash)
         {
 
@@ -46,7 +63,7 @@ namespace PrototypeMIP_mk1.Model
             }
             using(KeyDbContext db = new KeyDbContext())
             {
-                Tuple<string,string> t = en.NewKey();
+                Tuple<string,string> t = en.GenKey();
                 Keys keys = new Keys();
                 keys.Access = Access;
                 keys.key = t.Item1;
@@ -80,8 +97,8 @@ namespace PrototypeMIP_mk1.Model
 
             using (KeyDbContext db = new KeyDbContext())
             {
-                string key ="";
-                string IV = "";
+                string key = "d2MP7WO7NYdSE4l/dHcniyOMkW8w1Fy6RBwR/HhV9II=";
+                string IV = "/xH6M0th/eE838EctFiEHg==";
                 var res = from keys in db.Keys
                           where keys.Access == access
                           select new
@@ -93,5 +110,9 @@ namespace PrototypeMIP_mk1.Model
             }
         }
 
+        public void Method()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

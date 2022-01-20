@@ -15,6 +15,7 @@ namespace PrototypeMIP_mk1.Model.EF_DBContext
         public string Access { get; set; }
         public string key { get; set; }
         public string IV { get; set; }
+
     }
     public class KeyDbContext : DbContext
     {

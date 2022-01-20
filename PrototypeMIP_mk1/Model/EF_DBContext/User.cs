@@ -15,6 +15,7 @@ namespace PrototypeMIP_mk1.Model.EF_DBContext
         public string Username { get; set; }
         public string Password { get; set; }
         public string Access { get; set; }
+
     }
     public class UserDbContext : DbContext
     {

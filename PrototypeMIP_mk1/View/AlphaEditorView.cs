@@ -31,6 +31,13 @@ namespace PrototypeMIP_mk1
             this.Text = t.Item2;
         }
 
+        public EditorController EditorController
+        {
+            get => default;
+            set
+            {
+            }
+        }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -131,5 +138,9 @@ namespace PrototypeMIP_mk1
             }
         }
 
+        public void Method()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

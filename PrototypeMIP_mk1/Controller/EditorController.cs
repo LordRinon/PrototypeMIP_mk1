@@ -11,18 +11,37 @@ namespace PrototypeMIP_mk1.Controller
     {
         EncryptionModule encryption = new EncryptionModule();
         LoginModule lg = new LoginModule();
+
+        public EncryptionModule EncryptionModule
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public AlphaEditor AlphaEditor
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public string OpenFile(string path, string access)
         {
             string text = File.ReadAllText(path);
-            Tuple<string, string> t = lg.GetKey(access);
-            string decryped_text = encryption.Decrypt(new Tuple<string, string, string>(text, t.Item1, t.Item2));
-            return decryped_text;
+            //Tuple<string, string> t = lg.GetKey(access);
+            //string decryped_text = encryption.Decrypt(new Tuple<string, string, string>(text, t.Item1, t.Item2));
+            //return decryped_text;
+            return text;
         }
         public void SaveFile(string text, string path, string access)
         {
-            Tuple<string, string> t = lg.GetKey(access);
-            string encrypted_text = encryption.Encrypt(new Tuple<string, string, string>(text, t.Item1, t.Item2));
-            File.WriteAllText(path, encrypted_text);
+            //Tuple<string, string> t = lg.GetKey(access);
+            //string encrypted_text = encryption.Encrypt(new Tuple<string, string, string>(text, t.Item1, t.Item2));
+            //File.WriteAllText(path, encrypted_text);
+            File.WriteAllText(path, text);
         }
 
     }

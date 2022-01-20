@@ -21,6 +21,7 @@ namespace PrototypeMIP_mk1
     {
         private AesCryptoServiceProvider aes;
 
+
         // Encrypt - Returns encrypted Text + Key + IV | No key & IV Provided
         public Tuple<string, string, string> Encrypt(string param)
         {
@@ -85,7 +86,7 @@ namespace PrototypeMIP_mk1
 
             List<byte[]> clearbytes = new List<byte[]>();
 
-            byte[] encryptedbytes = Convert.FromBase64String(param.Item1);
+            byte[] encryptedbytes = Convert.FromBase64String(param.Item1); // System.FormatException: 'Invalid length for a Base-64 char array or string.'
 
             using (MemoryStream ms = new MemoryStream())
             {
@@ -144,10 +145,30 @@ namespace PrototypeMIP_mk1
         public Tuple<string, string> NewKey()
         {
             aes = new AesCryptoServiceProvider();
-            aes.KeySize = 256;
-            aes.CreateEncryptor();
+            aes.GenerateKey();
+            aes.GenerateIV();
             return new Tuple<string, string>(Convert.ToBase64String(aes.Key), Convert.ToBase64String(aes.IV));
         }
+        public Tuple<string, string> GenKey()
+        {
+            List<byte[]> encryptedbytes = new List<byte[]>();
+            StringBuilder sb = new StringBuilder();
+            aes = new AesCryptoServiceProvider();
+
+            byte[] clearbytes = Encoding.UTF8.GetBytes("aaa");
+            using (MemoryStream ms = new MemoryStream())
+            {
+                using (CryptoStream cs = new CryptoStream(ms, aes.CreateEncryptor(), CryptoStreamMode.Write))
+                {
+                    cs.Write(clearbytes, 0, clearbytes.Length);
+                    cs.Close();
+                }
+                encryptedbytes.Add(ms.ToArray());
+            }
+
+            return new Tuple<string, string>(Convert.ToBase64String(aes.Key), Convert.ToBase64String(aes.IV));
+        }
+
     }
 }
 

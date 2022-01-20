@@ -56,7 +56,7 @@
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(168, 30);
             this.btnUpdate.TabIndex = 2;
-            this.btnUpdate.Text = "Update";
+            this.btnUpdate.Text = "Update List";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -96,6 +96,7 @@
             this.Name = "AlphaEditor";
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "temp // folder opened";
             this.ResumeLayout(false);
 

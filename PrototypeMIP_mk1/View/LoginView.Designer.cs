@@ -35,6 +35,11 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnCreate = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.changeLanguageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.romanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnFolSel
@@ -112,6 +117,39 @@
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.changeLanguageToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(319, 24);
+            this.menuStrip1.TabIndex = 7;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // changeLanguageToolStripMenuItem
+            // 
+            this.changeLanguageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.englishToolStripMenuItem,
+            this.romanaToolStripMenuItem});
+            this.changeLanguageToolStripMenuItem.Name = "changeLanguageToolStripMenuItem";
+            this.changeLanguageToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
+            this.changeLanguageToolStripMenuItem.Text = "Change Language";
+            // 
+            // englishToolStripMenuItem
+            // 
+            this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.englishToolStripMenuItem.Text = "English";
+            this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
+            // 
+            // romanaToolStripMenuItem
+            // 
+            this.romanaToolStripMenuItem.Name = "romanaToolStripMenuItem";
+            this.romanaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.romanaToolStripMenuItem.Text = "Romana";
+            this.romanaToolStripMenuItem.Click += new System.EventHandler(this.romanaToolStripMenuItem_Click);
+            // 
             // LoginView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -126,11 +164,16 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAuth);
             this.Controls.Add(this.btnFolSel);
+            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "LoginView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prototype - Login";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,5 +188,9 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnCreate;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem changeLanguageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem romanaToolStripMenuItem;
     }
 }

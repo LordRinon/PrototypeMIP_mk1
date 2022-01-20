@@ -84,7 +84,7 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(105, 81);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(116, 21);
             this.txtPassword.TabIndex = 4;
@@ -92,7 +92,7 @@
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(105, 33);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(116, 21);
             this.txtUsername.TabIndex = 5;
@@ -111,8 +111,9 @@
             this.Controls.Add(this.btnCancel);
             this.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CreateAccView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create Account";
             this.ResumeLayout(false);
             this.PerformLayout();

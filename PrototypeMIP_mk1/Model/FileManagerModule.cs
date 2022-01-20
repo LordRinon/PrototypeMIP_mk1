@@ -10,6 +10,14 @@ namespace PrototypeMIP_mk1.Model
 {
     public class FileManagerModule
     {
+        public Controller.LoginController LoginController
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public Tuple<string, string> OpenFolder()
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();
@@ -21,5 +29,6 @@ namespace PrototypeMIP_mk1.Model
             }
             else return null;
         }
+
     }
 }

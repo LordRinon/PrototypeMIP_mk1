@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PrototypeMIP_mk1.Controller.EditorController">
+    <Position X="2.5" Y="1.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAABAABAAAAAAgAAAAAAAAAAAAAAEAABAACAAAAAAA=</HashCode>
+      <FileName>Controller\EditorController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EncryptionModule" />
+      <Property Name="AlphaEditor" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PrototypeMIP_mk1.Controller.LoginController">
+    <Position X="2.5" Y="5.5" Width="1.5" />
+    <Members>
+      <Method Name="Method" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAABACAAJAAAAAAgAAABAAAAABAgBAQAFABgAAA=</HashCode>
+      <FileName>Controller\LoginController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LoginView" />
+      <Property Name="CreateAccView" />
+      <Property Name="LoginModule" />
+      <Property Name="EncryptionModule" />
+      <Property Name="EncryptionModule1" />
+      <Property Name="EditorController" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PrototypeMIP_mk1.Model.EF_DBContext.Keys" Collapsed="true">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgEAAAAAEAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Model\EF_DBContext\Keys.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrototypeMIP_mk1.Model.EF_DBContext.KeyDbContext" Collapsed="true">
+    <Position X="6.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\EF_DBContext\Keys.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrototypeMIP_mk1.Model.EF_DBContext.User" Collapsed="true">
+    <Position X="8.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgEAAAQAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Model\EF_DBContext\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrototypeMIP_mk1.Model.EF_DBContext.UserDbContext" Collapsed="true">
+    <Position X="6.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\EF_DBContext\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrototypeMIP_mk1.EncryptionModule">
+    <Position X="4.5" Y="1.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AQAAAgAAAAIAAAAQAAAAFAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\EncryptionModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrototypeMIP_mk1.AlphaEditor">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Method Name="Method" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAABAAQBRCAAAAASAASgBAALAAJCBAAAABQAAAAABAA=</HashCode>
+      <FileName>View\AlphaEditorView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EditorController" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PrototypeMIP_mk1.Model.FileManagerModule">
+    <Position X="4.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Model\FileManagerModule.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LoginController" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PrototypeMIP_mk1.Model.LoginModule">
+    <Position X="4.5" Y="7" Width="1.5" />
+    <Members>
+      <Method Name="Method" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAgAAQAAACAAEAAQAAQAAAAAgA=</HashCode>
+      <FileName>Model\LoginModule.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="UserDbContext" />
+      <Property Name="LoginController" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PrototypeMIP_mk1.View.CreateAccView">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <Members>
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Method Name="Method" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAgAAEAAACAAABEAAAWgCEECAAAAAAAAABAAAgAAAgA=</HashCode>
+      <FileName>View\CreateAccView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LoginController" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PrototypeMIP_mk1.View.LoginView">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <Members>
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Method Name="Method" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAgAAEgAICAAABEAgAWgCAECIAAAAAAAABgAAgQAAgA=</HashCode>
+      <FileName>View\LoginView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LoginController" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PrototypeMIP_mk1.Model.TracerModule" Collapsed="true">
+    <Position X="11.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAQAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\TracerModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

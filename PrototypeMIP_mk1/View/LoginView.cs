@@ -26,6 +26,14 @@ namespace PrototypeMIP_mk1.View
             InitializeComponent();
         }
 
+        public LoginController LoginController
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         private void btnFolSel_Click(object sender, EventArgs e)
         {
             OpenFolder_Update(controller.OpenFolder());
@@ -78,6 +86,21 @@ namespace PrototypeMIP_mk1.View
         private void btnCreate_Click(object sender, EventArgs e)
         {
             controller.OpenAccCreation();
+        }
+
+        public void Method()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void englishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void romanaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
