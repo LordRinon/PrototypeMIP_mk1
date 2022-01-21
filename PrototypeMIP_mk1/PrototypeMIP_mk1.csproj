@@ -44,6 +44,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -56,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangeLanguage.cs" />
     <Compile Include="Controller\EditorController.cs" />
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Migrations\202201200228274_InitialCreate.cs" />
@@ -104,10 +106,19 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\AlphaEditorView.ro.resx">
+      <DependentUpon>AlphaEditorView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\CreateAccView.resx">
       <DependentUpon>CreateAccView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\CreateAccView.ro.resx">
+      <DependentUpon>CreateAccView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginView.ro.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
@@ -125,7 +136,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\LangSupp\LangSupp.csproj">
+      <Project>{a1939096-ff72-4949-8eec-1573f7cc93b8}</Project>
+      <Name>LangSupp</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

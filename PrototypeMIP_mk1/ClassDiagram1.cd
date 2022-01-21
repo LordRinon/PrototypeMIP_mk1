@@ -23,17 +23,9 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAAAABACAAJAAAAAAgAAABAAAAABAgBAQAFABgAAA=</HashCode>
+      <HashCode>AAAAAAABACAAJAAAAAAgAAAAAAAAAAAABAQABAAgAAA=</HashCode>
       <FileName>Controller\LoginController.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="LoginView" />
-      <Property Name="CreateAccView" />
-      <Property Name="LoginModule" />
-      <Property Name="EncryptionModule" />
-      <Property Name="EncryptionModule1" />
-      <Property Name="EditorController" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="PrototypeMIP_mk1.Model.EF_DBContext.Keys" Collapsed="true">
     <Position X="8.75" Y="3.5" Width="1.5" />
@@ -147,7 +139,7 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAgAAEgAICAAABEAgAWgCAECIAAAAAAAABgAAgQAAgA=</HashCode>
+      <HashCode>AUgAAEgAICAAAAFAgAWgCAECIEAAAAAAAhgAAgQAAgA=</HashCode>
       <FileName>View\LoginView.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

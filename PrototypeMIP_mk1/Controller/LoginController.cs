@@ -18,53 +18,7 @@ namespace PrototypeMIP_mk1.Controller
         //TracerModule tracer = new TracerModule();
         Tuple<string, string> t;
 
-        public LoginView LoginView
-        {
-            get => default;
-            set
-            {
-            }
-        }
 
-        public CreateAccView CreateAccView
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public LoginModule LoginModule
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public EncryptionModule EncryptionModule
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public EncryptionModule EncryptionModule1
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public EditorController EditorController
-        {
-            get => default;
-            set
-            {
-            }
-        }
 
         public void OpenEditor() { }
 

@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginView));
             this.btnFolSel = new System.Windows.Forms.Button();
             this.btnAuth = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnCreate = new System.Windows.Forms.Button();
@@ -44,134 +45,90 @@
             // 
             // btnFolSel
             // 
+            resources.ApplyResources(this.btnFolSel, "btnFolSel");
             this.btnFolSel.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.btnFolSel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFolSel.Location = new System.Drawing.Point(9, 138);
-            this.btnFolSel.Margin = new System.Windows.Forms.Padding(0);
             this.btnFolSel.Name = "btnFolSel";
-            this.btnFolSel.Size = new System.Drawing.Size(100, 30);
-            this.btnFolSel.TabIndex = 0;
-            this.btnFolSel.Text = "Select Folder";
             this.btnFolSel.UseVisualStyleBackColor = false;
             this.btnFolSel.Click += new System.EventHandler(this.btnFolSel_Click);
             // 
             // btnAuth
             // 
-            this.btnAuth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAuth.Location = new System.Drawing.Point(209, 138);
-            this.btnAuth.Margin = new System.Windows.Forms.Padding(0);
+            resources.ApplyResources(this.btnAuth, "btnAuth");
             this.btnAuth.Name = "btnAuth";
-            this.btnAuth.Size = new System.Drawing.Size(100, 30);
-            this.btnAuth.TabIndex = 1;
-            this.btnAuth.Text = "Login";
             this.btnAuth.UseVisualStyleBackColor = true;
             this.btnAuth.Click += new System.EventHandler(this.btnAuth_Click);
             // 
-            // label1
+            // lblUser
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 40);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Username";
+            resources.ApplyResources(this.lblUser, "lblUser");
+            this.lblUser.Name = "lblUser";
             // 
-            // label2
+            // lblPassword
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 92);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 16);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Password";
+            resources.ApplyResources(this.lblPassword, "lblPassword");
+            this.lblPassword.Name = "lblPassword";
             // 
             // txtUsername
             // 
+            resources.ApplyResources(this.txtUsername, "txtUsername");
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsername.Location = new System.Drawing.Point(140, 38);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(116, 21);
-            this.txtUsername.TabIndex = 4;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(140, 89);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            resources.ApplyResources(this.txtPassword, "txtPassword");
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(116, 21);
-            this.txtPassword.TabIndex = 5;
             // 
             // btnCreate
             // 
-            this.btnCreate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreate.Location = new System.Drawing.Point(109, 138);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(0);
+            resources.ApplyResources(this.btnCreate, "btnCreate");
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(100, 30);
-            this.btnCreate.TabIndex = 6;
-            this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // menuStrip1
             // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.changeLanguageToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(319, 24);
-            this.menuStrip1.TabIndex = 7;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // changeLanguageToolStripMenuItem
             // 
+            resources.ApplyResources(this.changeLanguageToolStripMenuItem, "changeLanguageToolStripMenuItem");
             this.changeLanguageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.englishToolStripMenuItem,
             this.romanaToolStripMenuItem});
             this.changeLanguageToolStripMenuItem.Name = "changeLanguageToolStripMenuItem";
-            this.changeLanguageToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
-            this.changeLanguageToolStripMenuItem.Text = "Change Language";
             // 
             // englishToolStripMenuItem
             // 
+            resources.ApplyResources(this.englishToolStripMenuItem, "englishToolStripMenuItem");
             this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-            this.englishToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.englishToolStripMenuItem.Text = "English";
             this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
             // 
             // romanaToolStripMenuItem
             // 
+            resources.ApplyResources(this.romanaToolStripMenuItem, "romanaToolStripMenuItem");
             this.romanaToolStripMenuItem.Name = "romanaToolStripMenuItem";
-            this.romanaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.romanaToolStripMenuItem.Text = "Romana";
             this.romanaToolStripMenuItem.Click += new System.EventHandler(this.romanaToolStripMenuItem_Click);
             // 
             // LoginView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(319, 181);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnAuth);
             this.Controls.Add(this.btnFolSel);
             this.Controls.Add(this.menuStrip1);
-            this.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "LoginView";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Prototype - Login";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -183,8 +140,8 @@
 
         private System.Windows.Forms.Button btnFolSel;
         private System.Windows.Forms.Button btnAuth;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnCreate;

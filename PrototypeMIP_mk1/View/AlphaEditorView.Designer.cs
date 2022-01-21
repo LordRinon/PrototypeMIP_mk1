@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlphaEditor));
             this.btnSAVE = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.richtxtBox = new System.Windows.Forms.RichTextBox();
@@ -38,66 +39,44 @@
             // 
             // btnSAVE
             // 
-            this.btnSAVE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSAVE.Location = new System.Drawing.Point(12, 636);
-            this.btnSAVE.Margin = new System.Windows.Forms.Padding(4);
+            resources.ApplyResources(this.btnSAVE, "btnSAVE");
             this.btnSAVE.Name = "btnSAVE";
-            this.btnSAVE.Size = new System.Drawing.Size(167, 30);
-            this.btnSAVE.TabIndex = 1;
-            this.btnSAVE.Text = "Save";
             this.btnSAVE.UseVisualStyleBackColor = true;
             this.btnSAVE.Click += new System.EventHandler(this.btnSAVE_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Location = new System.Drawing.Point(12, 468);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
+            resources.ApplyResources(this.btnUpdate, "btnUpdate");
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(168, 30);
-            this.btnUpdate.TabIndex = 2;
-            this.btnUpdate.Text = "Update List";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // richtxtBox
             // 
-            this.richtxtBox.Location = new System.Drawing.Point(188, 15);
-            this.richtxtBox.Margin = new System.Windows.Forms.Padding(4);
+            resources.ApplyResources(this.richtxtBox, "richtxtBox");
             this.richtxtBox.Name = "richtxtBox";
-            this.richtxtBox.Size = new System.Drawing.Size(436, 651);
-            this.richtxtBox.TabIndex = 3;
-            this.richtxtBox.Text = "";
             this.richtxtBox.TextChanged += new System.EventHandler(this.richtxtBox_TextChanged);
             // 
             // treeV
             // 
-            this.treeV.Location = new System.Drawing.Point(12, 15);
+            resources.ApplyResources(this.treeV, "treeV");
             this.treeV.Name = "treeV";
-            this.treeV.Size = new System.Drawing.Size(169, 446);
-            this.treeV.TabIndex = 4;
             this.treeV.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeV_NodeMouseDoubleClick);
             this.treeV.MouseMove += new System.Windows.Forms.MouseEventHandler(this.treeV_MouseMove);
             // 
             // AlphaEditor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(638, 682);
             this.Controls.Add(this.treeV);
             this.Controls.Add(this.richtxtBox);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSAVE);
-            this.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AlphaEditor";
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "temp // folder opened";
             this.ResumeLayout(false);
 
         }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
@@ -95,12 +96,17 @@ namespace PrototypeMIP_mk1.View
 
         private void englishToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            var changeLanguage = new ChangeLanguage();
+            changeLanguage.UpdateConfig("language", "en");
+            Application.Restart();
         }
 
         private void romanaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            var changeLanguage = new ChangeLanguage();
+            changeLanguage.UpdateConfig("language", "ro");
+            Application.Restart();
         }
+
     }
 }
